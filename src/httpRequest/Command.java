@@ -13,20 +13,18 @@ public class Command {
 	public Command(int input, Website website) {
 		this.input = input;
 		this.website = website;
-		System.out.println(choices());
 	}
 	
-	private String choices() {
+	public String printResult() {
 		switch (input) {
 		case 1: 
 			return website.getHeader();
 		case 2: 
 			return website.getBody();
 		case 3: 
-			return "quit";
+			return "Exiting..";
 		default: 
 			return "That is not the correct command";
 		}
 	}
-
 }
